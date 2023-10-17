@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <include file="example-changelog.sql" relativeToChangelogFile="true"/>
+    <includeAll path="routine" relativeToChangelogFile="true"/>
+    <!--includeAll path="routines" relativeToChangelogFile="true" />
+    <includeAll path="views" relativeToChangelogFile="true"/>
+    <includeAll path="d:\work\arc\migrations\view" relativeToChangelogFile="true"/>
+    <includeAll path="d:\work\arc\migrations\meta" relativeToChangelogFile="true"/>
+    <includeAll path="d:\work\arc\migrations\data" relativeToChangelogFile="true"/-->
+</databaseChangeLog>

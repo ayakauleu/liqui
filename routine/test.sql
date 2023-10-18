@@ -25,7 +25,7 @@ BEGIN
         --       CALL dbms_application_info.set_action(v_app_name);
         PERFORM SET_CONFIG('kp_context.ip_address', v_ip_address, FALSE);
         PERFORM SET_CONFIG('kp_context.user_id', v_user_id, FALSE);
-        PERFORM SET_CONFIG('kp_context.app_name', 'New app name', FALSE);
+        PERFORM SET_CONFIG('kp_context.app_name', 'New app name 3', FALSE);
         PERFORM SET_CONFIG('kp_context.app_id', '1', FALSE);
     END IF;
 

@@ -27,7 +27,7 @@ BEGIN
         WHERE LOWER(login) = LOWER(p_user_name)
           AND p_password = password;
         IF v_user_id IS NULL THEN
-            RAISE 'Неверный логин или пароль';
+            RAISE 'РќРµРІРµСЂРЅС‹Р№ Р»РѕРіРёРЅ РёР»Рё РїР°СЂРѕР»СЊ';
         END IF;
     ELSE
         SELECT payload, valid
@@ -57,7 +57,7 @@ BEGIN
     FROM auth.user_
     WHERE user_id = v_user_id;
     IF v_type_id <> p_client_id THEN
-        RAISE 'Пользователю этой роли недоступно это приложение';
+        RAISE 'РџРѕР»СЊР·РѕРІР°С‚РµР»СЋ СЌС‚РѕР№ СЂРѕР»Рё РЅРµРґРѕСЃС‚СѓРїРЅРѕ СЌС‚Рѕ РїСЂРёР»РѕР¶РµРЅРёРµ';
     END IF;
 
     v_access_token := auth.access_token_compose(v_user_id, v_access_exp);

@@ -1,8 +1,11 @@
+CREATE SEQUENCE auth.user_user_id_seq;
+
 CREATE TABLE auth.user_ (
 	user_id integer DEFAULT nextval('auth.user_user_id_seq'::regclass) NOT NULL,
 	user_name text NOT NULL,
 	user_kind_id integer NOT NULL,
-	enabled boolean NOT NULL
+	enabled boolean NOT NULL,
+	type_id BIGINT REFERENCES auth.user_type (type_id)
 );
 
 ALTER TABLE auth.user_	ADD CONSTRAINT user_user_name_key UNIQUE (user_name);
